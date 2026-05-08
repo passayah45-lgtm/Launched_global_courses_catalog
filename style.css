@@ -1,0 +1,184 @@
+/* Import fonts for the professional EdTech look */
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700&family=DM+Sans:wght@300;400;500&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Brand Colors from your requirements */
+  --bg: #0d1117;
+  --surface: #161b22;
+  --surface2: #1c2330;
+  --border: #2a3441;
+  --accent: #ff6b35;  /* Orange Branding */
+  --accent2: #00d4aa; /* Success Green */
+  --text: #e6edf3;
+  --muted: #7d8590;
+  --font-head: 'Syne', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  min-height: 100vh;
+}
+
+.site {
+  max-width: 380px; /* Mobile-first layout */
+  margin: 0 auto;
+  padding: 0 0 40px;
+}
+
+/* --- Hero Section --- */
+.hero {
+  padding: 28px 16px 20px;
+  background: linear-gradient(160deg, #0d1117 0%, #1a0e2e 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.logo-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.logo-icon {
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(135deg, #ff6b35, #e84393);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: #fff;
+}
+
+.org-name {
+  font-family: var(--font-head);
+  font-size: 13px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.hero h1 {
+  font-family: var(--font-head);
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.hero p {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* --- Navigation & Tabs --- */
+nav {
+  display: flex;
+  margin: 20px 16px 24px;
+  background: var(--surface);
+  border-radius: 10px;
+  border: 0.5px solid var(--border);
+  overflow: hidden;
+}
+
+.nav-item {
+  flex: 1;
+  padding: 12px;
+  text-align: center;
+  font-size: 11px;
+  color: var(--muted);
+  cursor: pointer;
+  transition: 0.2s;
+  border-right: 0.5px solid var(--border);
+}
+
+.nav-item.active {
+  color: var(--accent);
+  background: rgba(255, 107, 53, 0.08);
+}
+
+/* --- Course Cards --- */
+.course-card {
+  background: var(--surface);
+  border: 0.5px solid var(--border);
+  border-radius: 14px;
+  padding: 16px;
+  margin: 0 16px 12px;
+  position: relative;
+}
+
+/* Green top-accent for Free courses */
+.course-card.free-accent::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, var(--accent2), transparent);
+}
+
+.course-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.course-title {
+  font-family: var(--font-head);
+  font-size: 14px;
+  font-weight: 700;
+  flex: 1;
+}
+
+.badge-free {
+  background: #003d2e;
+  color: var(--accent2);
+  font-size: 10px;
+  padding: 3px 8px;
+  border-radius: 20px;
+}
+
+.enroll-row {
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 0.5px solid var(--border);
+}
+
+.slots-bar {
+  flex: 1;
+  height: 4px;
+  background: var(--border);
+  border-radius: 2px;
+  margin: 0 8px;
+  overflow: hidden;
+}
+
+.slots-fill {
+  height: 100%;
+  background: var(--accent2);
+}
+
+.enroll-btn {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  padding: 6px 14px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* Helper to hide sections */
+.hidden {
+  display: none;
+}

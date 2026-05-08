@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Catalog | LaunchED Global</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="site"> <header class="hero">
+            <div class="logo-row">
+                <div class="logo-icon">L</div>
+                <span class="org-name">LaunchED Global</span>
+            </div>
+            <h1>Course Catalog</h1>
+            <p>Explore courses, meet mentors & check class schedules all in one place.</p>
+        </header>
+
+        <section class="stats-bar">
+            <div class="stat">
+                <span class="stat-num">12</span>
+                <span class="stat-label">Courses</span>
+            </div>
+            <div class="stat">
+                <span class="stat-num">6</span>
+                <span class="stat-label">Mentors</span>
+            </div>
+            <div class="stat">
+                <span class="stat-num">4</span>
+                <span class="stat-label">Free</span>
+            </div>
+        </section>
+
+        <nav class="main-nav">
+            <button class="nav-item active" id="tab-courses" onclick="showTab('courses', this)">Courses</button>
+            <button class="nav-item" id="tab-mentors" onclick="showTab('mentors', this)">Mentors</button>
+            <button class="nav-item" id="tab-schedule" onclick="showTab('schedule', this)">Schedule</button>
+        </nav>
+
+        <main id="content-view">
+            <div id="view-courses">
+                <div id="courses-grid"></div> </div>
+
+            <div id="view-mentors" class="hidden">
+                <p style="padding: 20px; color: var(--muted); text-align: center;">Mentor profiles coming soon...</p>
+            </div>
+
+            <div id="view-schedule" class="hidden">
+                <p style="padding: 20px; color: var(--muted); text-align: center;">Class schedules coming soon...</p>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
